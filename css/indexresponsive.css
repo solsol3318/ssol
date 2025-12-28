@@ -299,20 +299,14 @@ button:focus {outline: none;}
     .menuOpen .menuWrap {width: 0%; opacity: 0; left: -100%; transition: all 0.6s;}
     .menuOpen .menuWrap.on {width: 100%; opacity: 1; left: 0; transition: all 0.9s;}
 
-    .intro {height: 90vh;}
     .intro .intro-inner .txt .index768 {display: block; width: 100%;}
     .intro .intro-inner .txt .index390 {display: none;}
     
-
-    .intro {padding: 402px 90px 150px; width: 100%;}
-    .intro .intro-inner {margin: 0 auto; width: 100%; height: 300px; text-align: center;}
+    .intro {padding: 332px 0 0; width: 100%; height: 80vh;}
+    .intro .intro-inner {margin: 0 auto; width: 100%; height: 155px; text-align: center;}
     .inner-header .logo {top: 30%;}
     .inner-header .logo a {width: 130px; height: 22px;}
     .visual .img-bottom {width: 200px; height: 275px; bottom: -20%; left: 50%;}
-
-    .intro {width: 100%; height: 66vh; padding: 332px 0 0; align-items: center;}
-    .intro .intro-inner {width: 100%; height: 155px;}
-    .intro .intro-inner .txt .index390 {display: none;}
 
     .scroll-container {max-width: 100%; height: auto; background: #1a1a1e; margin-bottom: -400px;}
     .scroll-item {height: 100vh; min-height: 100vh; position:relative; overflow: visible; display: block;}
