@@ -1,0 +1,306 @@
+@charset "utf-8"; 
+
+
+/* reset */
+* {margin: 0;padding: 0; box-sizing: border-box;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none;}
+button:focus {outline: none;}
+
+
+/* 공통요소 */
+body {font-family: 'Pretendard', sans-serif; font-weight: 300; height: 100%; margin: auto; padding: 0; overflow-x: hidden; background: #F0E5E0; z-index: 0; overflow: hidden;}
+.tit {font-family: 'El Messiri', sans-serif; font-weight: normal; font-size: clamp(60px, 54px, 34px); letter-spacing: -3%;}
+.txt {font-size: clamp(20px, 24px, 16px); font-weight: 200;}
+span.dot {color: #FFA223;}
+
+
+/* header */ 
+header {background: linear-gradient( rgba(26,26,30,0.4)0%, rgba(26,26,30,0)100%); width: 100%; height: 156px; position: absolute; left: 0; top: 0; z-index: 1000; transition: background 0.5s ease, height 0.5s ease;}
+header.scrolled {background: #1A1A1E; position: fixed; height: 100px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);}
+header.fixed-state {position: fixed; top: 0; width: 100%; height: 100px; background: linear-gradient( rgba(26,26,30,0.4)0%, rgba(26,26,30,0)100%); transition: transform 0.4s ease, height 065s ease, background 0.5s ease; z-index: 1000;}
+header.hide {transform: translateY(-100%);}
+header.fixed-state .inner-header nav {padding: 39px 148px 70px; align-items: center;}
+header.fixed-state .inner-header .logo {opacity: 1;}
+
+.inner-header {width: 100%; margin: 0 auto; align-items: center;  font-family: 'El Messiri', sans-serif; color: rgba(234,234,234,0.4); font-size: 16px; letter-spacing: -2%; font-weight: normal;}
+.inner-header .gnb .have {color: rgba(234,234,234,0.8);}
+.inner-header .mobile-menu-toggle {display: none;}
+.inner-header nav {width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 39px 148px 70px;}
+.inner-header .gnb {width: 19%; display: flex; justify-content: space-between;}
+.inner-header .gnb a {display: block; width: 100%; height: 100%;}
+.inner-header .logo {position: absolute; left: 50%; transform: translateX(-50%); margin:0; z-index: 10;opacity: 0; transition: opacity 0.4s ease;}
+
+header.scrolled .inner-header .logo {opacity: 1;}
+.inner-header .logo a {display: block; width: 215px; height: 37px; cursor: pointer;}
+.inner-header .logo a img {width: 100%; height: 100%;}
+.inner-header .tnb {width: 8%; display: flex; justify-content: space-between;}
+.inner-header .tnb a {display: block; width: 100%; height: 100%;}
+.inner-header .tnb .icon {display: none;}
+.menuOpen {display: none;}
+
+
+/* mainVideo */
+.visual {width: 100vw; height: 100vh; position: relative;}
+.visual .bg {position: absolute; left: 0;top: 0; width: 100vw; height: 100vh; background-image: url('img/visual_bg.png');background-size: cover; z-index: 1;}
+.visual .grad { position: absolute; left: 0; top: 10%; width: 100%; height: 150vh; z-index: 3; background: linear-gradient(to bottom, rgba(26,26,30,0) 0%, rgba(26,26,30,0) 20%, rgba(26,26,30,1) 75%, rgba(26,26,30,1) 100%);}
+.visual .main-bg {width: 100vw; height: 100vh; object-fit: cover; position: absolute; left: 0; top: 0; z-index: 2;}
+.visual a.logo {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 85%; height: auto; z-index: 200;}
+.visual a.logo img {width: 100%; height: auto;}
+.visual .img-bottom {display: block; width: 300px; height: 400px; position: absolute; bottom: -30%; left: 50%; transform: translateX(-50%); opacity: 1; z-index: 201;}
+.visual .img-bottom img {width: 100%;}
+
+
+/* intro */
+.intro {background: #1A1A1E; width: 100%; height: 100vh; padding: 350px 0; align-items: center;}
+.intro .intro-inner {margin: 100px auto 0; width: 80%; height: 100px; text-align: center;}
+.intro .intro-inner .tit {color: #eaeaea; text-align: center; margin-bottom: 20px;}
+.intro .intro-inner .txt {color: #a9a9a9; line-height: 140%; letter-spacing: 0;}
+.intro .intro-inner .tit .index768::before {display: none;}
+.intro .intro-inner .txt .index390::before {content: "\A"; white-space: pre; display: block; height: 0; margin: 0; line-height: 0;}
+
+/* intro단어쪼갠거! */
+.intro-inner .tit span {display: inline; color: #C7C7C7; opacity: 0.15; transition: color 0.3s;}
+.intro-inner .txt span {display: inline; color: #9F9F9F; opacity: 0.15; transition: color 0.3s;}
+.intro-inner .tit span:last-child {color: #FFA223 !important; opacity: 1;}
+
+
+/* product */
+.scroll-container {width: 100%; position: relative; overflow: visible; background: transparent;}
+.scroll-item {position: relative; width: 100%; height: 100vh; overflow: hidden;}
+.scroll-item__inner {display: flex; width: 100%; height: 100%;}
+
+.left-sticky {width: 50%; height: 100vh; position: relative; overflow: hidden;}
+.left-sticky .img-wrap {position: relative; width: 100%; height: 100%; z-index: 10;}
+.left-sticky .img-wrap img {position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0;}
+.img-wrap img:first-child {opacity: 1;}
+
+.product-title {position: fixed; top: 65%; right: -25%; font-size: 150px; font-family: 'OT Neglige', sans-serif; font-weight: normal; color: #967A6B; z-index: 9999; pointer-events: none; width: 100%; opacity: 0; margin: 0; text-align: center; white-space: nowrap;}
+
+.right-content {width: 50%; height: 100vh; display: flex; justify-content: center; align-items: center; perspective: 2000px;}
+.product-list {position: relative; width: 410px; height: 410px; transform-style: preserve-3d;}
+.product-list li {position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; list-style: none;}
+.product-list li img { width: 100%; height: 100%; object-fit: cover;}
+
+/* model */
+.model {width: 100%; background-color: transparent !important; position: relative; z-index: 4; min-height: 100vh; }
+.model .model-inner {width: 100%; margin: 300px auto 40px; position: relative; background-color: transparent !important;}
+.model .model-inner .right-txt {width: 100%; height: 239px; position:absolute; top: 2%; right: 5%; text-align: right; line-height: 120%;}
+.model .model-inner .right-txt .tit .index768::after {content: "\A"; white-space: pre; display: block; height: 0; margin: 0; line-height: 0;}
+.model .model-inner .right-txt .txt .index768::after {content: "\A"; white-space: pre; display: block; height: 0; margin: 0; line-height: 0;}
+.model .model-inner .right-txt .tit {line-height: 100%; color: #CCA693; margin-bottom: 10px; letter-spacing: -2%; font-weight: 300;}
+
+.model .model-inner .right-txt .tit span {color: #CCA693 !important; }
+.model .model-inner .right-txt .txt {line-height: 140%; letter-spacing: -2%; color: #414141;}
+.model .model-inner .right-txt .txt span {color: #414141 !important;}
+.model .model-inner .top {width: 40%; display: flex; justify-content: space-between;}
+.model .model-inner .top .woman {display: block; width: 54%;}
+.model .model-inner .top .woman img {width: 100%;} 
+.model .model-inner .top .wind {display: block; width: 43%; padding-top: 56%;}
+.model .model-inner .top .wind img {width: 100%;}
+
+.model .model-inner .middle {width: 60%; display: flex;}
+.model .model-inner .middle .vertical {width: 13%; display: block; position: absolute; bottom: 53%; right: 52%; overflow: hidden; animation: verticalAni 4s ease-out infinite;}
+.model .model-inner .middle .vertical img {width: 100%; display: block; position: absolute; bottom: 0; left: 0;}
+.model .imgAni {display: block; overflow: hidden; position: relative; background-color: transparent;}
+.model .imgAni img {width: 100%; height: 120%; object-fit: cover; will-change: transform;}
+
+@keyframes verticalAni {
+    0% {height: 0%}
+    20% {height: 0%}
+    100% {height: 38%}
+}
+@media (max-width: 1024px) {
+    @keyframes verticalAni {
+        0% { height: 30%; }
+        20% { height: 30%; }
+        100% { height: 38%; } /* 도달 높이를 줄임 */
+    }
+}
+@media (max-width: 768px) {
+    @keyframes verticalAni {
+        0% { height: 30%; }
+        20% { height: 30%; }
+        100% { height: 38%; } /* 더 짧게 수정 */
+    }
+}
+
+.model .model-inner .middle .her {width: 50%; position: absolute; top: 22%; right: 0;}
+.model .model-inner .middle .her img {width: 100%;}
+
+.model .model-inner .bottom {width: 50%; margin: 1200px auto 80px;}
+.model .model-inner .bottom .renewal {width: 60%; margin: auto;}
+.model .model-inner .bottom .renewal img {width: 100%; margin-bottom: -36px;}
+.model .model-inner .bottom .txt {color: #414141; line-height: 150%; text-align: center; margin-bottom: 36px;}
+.model .model-inner .bottom .txt span {color: #414141 !important;}
+.model .model-inner .bottom .txt br {display: none;}
+.model .model-inner .bottom .txt b {display: block; line-height: 1.4; margin: 0; padding: 0;}
+.model .model-inner .bottom .txt .index390::after {content: "\A"; white-space: pre; display: block; height: 0; margin: 0; line-height: 0;}
+
+.model .model-inner .bottom .btn {position: relative; overflow: hidden; display: flex; justify-content: center; align-items: center; width: 25%; height: 65px; margin: 0 auto; color: #DDC2B4; font-size: 20px; letter-spacing: -0.03em; border: 1px solid #DDC2B4; background: transparent; transition: color 0.4s ease;}
+
+/*  btn hover 배경 */
+.model .model-inner .bottom .btn::before { content: ''; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: #CBA693; transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease; z-index: -1;}
+/* hover 상태 */
+.model .model-inner .bottom .btn:hover::before, .model .model-inner .bottom .btn:focus::before {transform: scaleX(1);}
+.model .model-inner .bottom .btn:hover, .model .model-inner .bottom .btn:focus {color: #EFEFEF;}
+
+/* 텍스트 & 아이콘 위로 */
+.model .model-inner .bottom .btn span, .model .model-inner .bottom .btn { position: relative; overflow: hidden;}
+.model .model-inner .bottom .btn span {font-size: 11px; font-weight: bold; margin-left: 13px; margin-top: 2px;}
+
+/* marquee */
+.moving-txt {padding: 80px 0; overflow: hidden;}
+.moving-txt .marquee {font-family: 'OT Neglige', sans-serif; font-size: 500px; letter-spacing: 2%; font-weight: normal; line-height: 90%;}
+.moving-txt .marquee .track {display: flex; width: max-content;}
+
+@keyframes marqueeLTR {
+    0% {transform: translateX(-50%);}
+    100% {transform: translateX(0%);}
+}
+@keyframes marqueeRTL {
+    0% {transform: translateX(0%);}
+    100% {transform: translateX(-50%);}
+}
+
+.moving-txt .left-to-right span {width: max-content; display: flex; gap: 10px; animation: marqueeLTR 30s linear infinite;}
+.moving-txt .right-to-left span {width: max-content; display: flex; gap: 10px; animation: marqueeRTL 30s linear infinite;}
+
+
+/* skinconcern */
+.skin-concern {background-color: transparent; padding: 200px 0 310px; height: 380vh; cursor: none; background: #1A1A1E;}
+.skin-concern .concern-inner {width: 100%; margin: 0 auto; max-width: 1600px;}
+.skin-concern .concern-inner .text-box {width: 100%; text-align: center; margin: 0 auto 200px;}
+.skin-concern .concern-inner .tit .index768::after {content: "\A"; white-space: pre; display: block; height: 0; margin: 0; line-height: 0;}
+.skin-concern .concern-inner .tit {color:#EAEAEA; line-height: 100%; letter-spacing: -2%; margin-bottom: 24px; font-weight: 300;}
+.skin-concern .concern-inner .tit .dot {color: #FFA223 !important;}
+.skin-concern .concern-inner .txt {color:#e2e2e2; letter-spacing: -2%; overflow: hidden;}
+
+/* skin 공통요소 */
+.skin-concern .concern-list {position:relative; width: 100%;}
+.skin-concern .concern-list .cursor-texture {position: fixed; left: 0; top:0; width: 104px; height: 105px; object-fit: cover; filter:brightness(100%); opacity: 0; pointer-events: none; z-index: 999; will-change: transform;}
+.skin-concern .concern-list .cursor-texture img {width: 100%;}
+
+.skin-concern .skin {display: flex; justify-content: space-between; align-items: center;}
+.skin-concern .skin .left {text-align: left; width: 41%; z-index: 100;}
+.skin-concern .label {display:block; font-size: 20px; color:#EAEAEA; letter-spacing: 1.2; margin-bottom: 20px;}
+.skin-concern .concern-list h3 {font-size: 150px; color:#EAEAEA; letter-spacing: 3%; line-height: 100%; font-family: 'OT Neglige', sans-serif; font-weight: normal;} 
+
+/* skin titleAni */
+.word {display: inline-block; opacity: 0; transform: translateY(20px); margin-right: 1px;}
+
+.skin-concern .imgAni {position: relative; clip-path: inset(100% 0 0 0); -webkit-clip-path: inset(100% 0 0 0);
+overflow: hidden;}
+.skin-concern .imgAni img {width: 100%; height: 100%; object-fit: cover; display: block;}
+
+.skin-concern .concern-list .moisturizing {position: absolute; right: 16%; top: 0;}
+.skin-concern .concern-list .moisturizing .left {margin-right: auto; position: absolute; right: 165%; top: 38%}
+.skin-concern .concern-list .moisturizing .img-box a {display: block; width: 339px; height: 500px; overflow: hidden; position: relative;}
+.skin-concern .concern-list .moisturizing .img-box a img {width: 100%; height: 100%; object-fit: cover; display: block; transition: filter 0.5s ease;}
+
+.skin-concern .concern-list .skinTexture {position: absolute; right: 40%; top: 650px;}
+.skin-concern .concern-list .skinTexture .left {width: 487px; margin-right: auto; position: absolute; right: 25%; top: 22%}
+.skin-concern .concern-list .skinTexture .img-box a {display: block; width: 261px; height: 390px;}
+.skin-concern .concern-list .skinTexture .img-box a img {width: 100%;}
+
+.skin-concern .concern-list .pore {position: absolute; left: 14%; top: 1250px;}
+.skin-concern .concern-list .pore .left {margin-right: auto; position: absolute; width: 611px; right: 24%; top: 15%;}
+.skin-concern .concern-list .pore .img-box a {display: block; width: 562px; height: 562px;}
+.skin-concern .concern-list .pore .img-box a img {width: 100%;}
+
+.skin-concern .concern-list .acne {position: absolute; right: 13%; top: 1950px;}
+.skin-concern .concern-list .acne .left {margin-right: auto; position: absolute; left: -155px; bottom: 25%;}
+.skin-concern .concern-list .acne .img-box a {display: block; width: 542px; height: 527px;}
+.skin-concern .concern-list .acne .img-box a img {width: 100%;}
+
+.skin-concern .concern-list .elasticity {position: absolute; right: 37%; top: 2600px;}
+.skin-concern .concern-list .elasticity .left {margin-right: auto; width: 611px; position: absolute; right: -5px; bottom: 25%;}
+.skin-concern .concern-list .elasticity .img-box a {display: block; width: 261px; height: 390px;}
+.skin-concern .concern-list .elasticity .img-box a img {width: 100%;}
+
+
+/* Theraghy */
+.theraphy {background: url(../img/new_bg.png) no-repeat center / cover; width: 100%; overflow: hidden; z-index: 1;}
+.theraphy .theraphy-inner {padding-top: 205px; z-index: 5;}
+.theraphy .theraphy-inner .title {padding: 90px 0 250px; position: relative;}
+.theraphy .theraphy-inner .title p {font-size: 200px; font-family: 'OT Neglige', sans-serif; color:#EAEAEA; line-height: 100%; letter-spacing: 2%; font-weight: normal; margin-bottom: 69px; text-align: center;}
+.theraphy .theraphy-inner .title p.a {position:absolute; left: 20%; top: 20px;}
+.theraphy .theraphy-inner .title p.b {position:absolute; right: 20%; top: 20px;}
+.theraphy .theraphy-inner .title span {position:absolute; background: #eaeaea; width: 14%; height: 1px; left: 36%; top: 36%;}
+
+.theraphy .marquee-container {width: 100%; overflow: hidden; cursor: default;}
+.theraphy .marquee-container::-webkit-scrollbar {display: none;}
+.theraphy .marquee-content {display: flex; width: max-content; flex-wrap: nowrap; padding: 0px; will-change: transform;}
+.theraphy ul {display: flex; justify-content: space-between; margin: 0 auto 150px; width: 100%;}
+.theraphy ul li {flex: 0 0 auto; width: auto; margin-right: 150px; display: flex; flex-direction: column; padding: 50px 0;}
+.theraphy ul li .txt-box {margin-top: 20px;}
+.theraphy ul li a.width {display: block; width: 319px; height: 242px; margin-bottom: 10px; overflow: hidden;}
+.theraphy ul li a.height {display: block; width: 239px; height: 320px; margin-top: 35px; overflow: hidden;}
+.theraphy ul li a img {width: 100%; filter: brightness(60%);} 
+.theraphy ul li .txt-box h3 {font-family: 'OT Neglige', sans-serif; letter-spacing: 3%; font-size: 40px; color: #EAEAEA; font-weight: normal;}
+.theraphy ul li .txt-box p {color: #A9A9A9; font-size: 16px;}
+.theraphy ul li a.imgAni2 {display: block; overflow: hidden; position: relative; will-change: transform;}
+.theraphy ul li a.imgAni2 img {width: 100%; height: 100%; object-fit: cover; position: static; transform: none; filter: brightness(80%)}
+
+
+/*  Day6 */
+.day6 {background-color: transparent;}
+.day6 .day-inner {display: flex; margin: 0 auto; width: 80%; align-items: center; padding: 200px 0 100px;}
+.day6 .day-inner .left {width: 40%;}
+.day6 .day-inner .left .day {width:438px; height: 663px;}
+.day6 .day-inner .left .day img {width: 100%;}
+.day6 .day-inner .left .textbox {margin-top: 30px;}
+.day6 .day-inner .left h2.tit {font-size: 38px; color:#1A1A1E; font-weight: 300;}
+.day6 .day-inner .left p.txt {color:#747273; margin-top: 10px;}
+.day6 .day-inner .left p.txt br {display: none;}
+
+.day6 .day-inner .left p.txt span {color: #747273 !important;}
+.day6 .day-inner .right {width: 60%; margin-top: 100px;}
+.day6 .day-inner .right img {width: 100%; width: 755px; height: 1088px;}
+.day6 .imgAni {display: block; overflow: hidden; position: relative; background-color: transparent;}
+.day6 .imgAni img {width: 100%; height: 130%; object-fit: cover; will-change: transform; object-fit: cover;}
+
+
+/* ad */
+.ad .ad-inner {margin: 0 auto;}
+.ad .ad-inner video {display: block; width: 1163px; height: 713px; margin: auto;}
+.ad a img {width: 100%;}
+
+
+/* footer */
+footer {width: 100%; margin: 0 auto;}
+footer top {background: #F0E5E0;}
+footer .top h3 {font-size: 24vw; font-family:'OT Neglige', sans-serif; line-height: 140%; letter-spacing: 2%; color: #1A1A1E; font-weight: normal; text-align: center; padding-top: 190px; white-space: nowrap; overflow: hidden; clip-path: inset(0 100% 0 0); clip-path: inset(0 100% 0 0); -webkit-clip-path: inset(0 100% 0 0);}
+footer .top h3.active {clip-path: inset(0 0 0 0);}
+footer .bottom {width: 100%; display: flex; background: #24242C; padding: 100px 70px;}
+footer .bottom .fo-ble {display: inline-block; width: 407px; height: 228px; margin-right: 80px;}
+footer .bottom ul {width: 70%;}
+footer .bottom ul li {font-size: 16px; color:#767676; line-height: 140%; letter-spacing: -2%;}
+footer .bottom ul.left {width: 100%;}
+footer .bottom ul.right {margin-left: 400px;}
+footer .bottom ul.right .contact {font-size: 24px; color: #DBDBDB;}
+footer .bottom ul.right .contact .none {display: inline-block;}
+footer .bottom ul.right .time {font-size: 16px; color: #DBDBDB;}
+
+
+
+@keyframes textAni {
+    0% {opacity: 0;}
+    30% {opacity: 0; transform: translate3d(0,40px,0) skewY(8deg); transform-origin: top left;}
+}
+
+.tit, .txt {overflow: hidden;}
+.tit.motion, .txt.motion {transform: translate3d(0,0,0) skewY(0deg); overflow: hidden;}
+
+.tit.motion b, .txt.motion b {display: block; animation: textAni 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;}
+
+.tit.motion b:nth-child(2) { animation-delay: 0.15s; }
+.txt.motion b:nth-child(2) { animation-delay: 0.2s; }
+.txt.motion b:nth-child(3) { animation-delay: 0.25s; }
+
