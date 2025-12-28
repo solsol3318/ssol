@@ -1,0 +1,10 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'El Messiri';
+    src: url(../font/ElMessiri-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'OT Neglige';
+    src: url(../font/OTNeglige-L.otf) format('truetype');
+}
