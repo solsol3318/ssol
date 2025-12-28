@@ -340,7 +340,7 @@ button:focus {outline: none;}
     .moving-txt {padding: 80px 0 50px;}
     .moving-txt .marquee {font-size: 120px; margin-bottom: 10px; letter-spacing: 2%;}
 
-    .skin-concern {padding: 100px 0; height: 250vh;}
+    .skin-concern {padding: 100px 0; height: 300vh;}
     .skin-concern .concern-inner .text-box {margin: 0 auto 100px;}
     .skin-concern .text-box .tit .index768.none::before {display: none ;}
     .skin-concern .text-box .tit .index390::before {content: "\A"; white-space: pre; display: block; height: 0; margin: 0; line-height: 0;}
