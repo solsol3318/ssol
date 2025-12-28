@@ -267,6 +267,13 @@ button:focus {outline: none;}
     .tit {font-size: 34px; line-height: 100%; letter-spacing: -3%;}
     .txt {font-size: 16px;}
 
+    html, body {
+        overflow-x: hidden !important;
+        overflow-y: auto !important; /* hidden이 강제로 걸려있는지 확인 */
+        height: auto !important;
+        touch-action: auto !important; 
+    }
+
     .inner-header .logo {position: absolute; left: 50%; top: 30%;}
     .inner-header .logo a {display: block; width: 100px; height: 17px; cursor: pointer;}
     .inner-header .mobile-menu-toggle {top: 7%; left: 0%;} 
@@ -279,7 +286,7 @@ button:focus {outline: none;}
     .inner-header .tnb .icon {display: inline-block; width: 26px; height: 26px; margin-right: 7px;}
 
     .menuOpen {display: block;}
-    .menuOpen .menuWrap {width: auto; height: 100vh; background: rgba(26, 26, 30, 0.8); z-index: 100; top: 0; right: 0; position: fixed;}
+    .menuOpen .menuWrap {width: 100vw; height: 100vh; background: rgba(26, 26, 30, 0.8); z-index: 100; top: 0; right: 0; position: fixed;}
     .menuOpen .menuWrap .close {display: block; width: 25px; height: 25px; position: absolute; right: 7%; top: 3.5%;}
     .menuOpen .menuWrap .close img {width: 100%;}
     .menuOpen .menuWrap .menu-tit {font-family: 'El Messiri', sans-serif; font-size: 28px; position: absolute; top: 30%; left: 50%; transform: translateX(-50%); text-align: center; font-weight: 200;}
