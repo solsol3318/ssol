@@ -98,6 +98,28 @@ header.hide {transform: translateY(-100%);}
 .product2 ul li .textBox p { width: 100%; font-size: 22px; font-weight: 500; line-height: 130%; letter-spacing: -4%; }
 
 
+.topBtn {
+    background: #454554;
+    display: block;
+    width: 64px;
+    height: 64px;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/arrow-1.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 28%;
+    position: fixed;
+    bottom: 8%;
+    right: 3%;
+    padding-top: 17px;
+    opacity: 0.5;
+}
+
+
+
 
 /* Footer */
 footer { width: 100%; margin: 0 auto; }

@@ -1,5 +1,6 @@
-//00.a속성제거(a를 클릭했을 때 위로 튕기는 현상 제거)
-$(document).on('click', 'a[href="#"]', function(e) {e.preventDefault();})
+$(document).on('click', 'a[href="#"]:not(.topBtn)', function(e){
+    e.preventDefault();
+});
 
 
 // 모바일 메뉴 open/close
