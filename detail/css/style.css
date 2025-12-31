@@ -123,20 +123,18 @@ header.hide {transform: translateY(-100%);}
 
 
 /* Footer */
-footer { width: 100%; margin: 0 auto; }
-footer .top h3 { font-size: 24vw; font-family:'OT Neglige', sans-serif; line-height: 140%; letter-spacing: 2%; color: #EAEAEA; font-weight: normal; text-align: center; padding-top: 190px; white-space: nowrap; overflow: hidden; clip-path: inset(0 100% 0 0); transition: clip-path 1.5s ease-in-out; }
+footer {width: 100%; margin: 0 auto;}
+footer .top h3 {font-size: 24vw; font-family:'OT Neglige', sans-serif; line-height: 140%; letter-spacing: 2%; color: #EAEAEA; font-weight: normal; text-align: center; padding-top: 190px; white-space: nowrap; overflow: hidden; clip-path: inset(0 100% 0 0); transition: clip-path 1.5s ease-in-out;}
 footer .top h3.active { clip-path: inset(0 0 0 0); }
 footer .bottom { width: 100%; display: flex; background: #24242C; padding: 100px 70px; }
 footer .bottom .fo-ble { display: inline-block; width: 407px; height: 228px; margin-right: 80px; }
 footer .bottom ul { width: 30%; }
-footer .bottom ul li { font-size: 16px; color:#767676; line-height: 140%; letter-spacing: -2%; }
-footer .bottom ul.right { margin-left: 530px; }
-footer .bottom ul.right .contact { font-size: 24px; color: #DBDBDB; }
-footer .bottom ul.right .contact .none { display: inline-block; }
-footer .bottom ul.right .time { font-size: 16px; color: #DBDBDB; }
-
-
-
+footer .bottom ul li {font-size: 16px; color:#767676; line-height: 140%; letter-spacing: -2%;}
+footer .bottom ul.right {margin-left: 530px;}
+footer .bottom ul.right .contact {font-size: 24px; color: #DBDBDB;}
+footer .bottom ul.right .contact .none {display: inline-block;}
+footer .bottom ul.right .time {font-size: 16px; color: #DBDBDB;}
+footer .bottom ul.right input {font-size: 14px; background: #3C3C3C; width: 186px; height: 35px; text-align: center; padding: 4px 0 5px; color: #c4c4c4; margin-top: 10px; cursor: pointer; border: none;}
 
 
 @media screen and (max-width: 1400px){
@@ -369,5 +367,6 @@ footer .bottom ul.right .time { font-size: 16px; color: #DBDBDB; }
     footer .bottom ul.right .contact .cus {font-size: 12px;}
     footer .bottom ul.right .contact .none {display: none;}
     footer .bottom ul.right .time {font-size: 10px;}
+    footer .bottom ul.right input { width: 120px; padding: 0;}
 }
 

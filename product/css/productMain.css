@@ -391,6 +391,7 @@ footer .bottom ul.right {margin-left: 530px;}
 footer .bottom ul.right .contact {font-size: 24px; color: #DBDBDB;}
 footer .bottom ul.right .contact .none {display: inline-block;}
 footer .bottom ul.right .time {font-size: 16px; color: #DBDBDB;}
+footer .bottom ul.right input {font-size: 14px; background: #3C3C3C; width: 186px; height: 35px; text-align: center; padding: 4px 45px 5px; color: #c4c4c4; margin-top: 10px; cursor: pointer; border: none;}
 
 
 /* header */
@@ -596,4 +597,5 @@ footer .bottom ul.right .time {font-size: 16px; color: #DBDBDB;}
     footer .bottom ul.right .contact .cus {font-size: 12px;}
     footer .bottom ul.right .contact .none {display: none;}
     footer .bottom ul.right .time {font-size: 10px;}
+    footer .bottom ul.right input { width: 120px; height: 35px; text-align: center; padding: 0; color: #c4c4c4; margin-top: 10px; cursor: pointer; border: none;}
 }

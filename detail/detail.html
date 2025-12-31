@@ -194,11 +194,22 @@
                     <li class="contact"><span class="cus">고객센터 </span> <span class="none">|</span> 070.4217.2827</li>
                     <li class="time">상담시간 | 10:00~18:00</li>
                     <li>토요일, 일요일 및 공휴일 제외</li>
+                    <input type="button" value="이미지 출처" onclick="showPopup();" />
+
+                    
                 </ul>
             </div>
         </footer>
     </div>
     <script>
+
+    function showPopup() {
+    const url = "../imgBy.html";
+    const name = "이미지출처";
+    const specs = "width=580, height=600, left=200, top=100";
+    
+    window.open(url, name, specs);
+}
         // 모바일 메뉴 open/close
 $(function () {
   $('.menuOpen button').on('click', function () {
@@ -302,8 +313,7 @@ document.addEventListener('DOMContentLoaded', function() {
         lastY = currY;
     });
 
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll(); // 최초 실행
+  
 });
 
 </script>

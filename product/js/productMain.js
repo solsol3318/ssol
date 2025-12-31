@@ -2,6 +2,14 @@ $(document).on('click', 'a[href="#"]:not(.topBtn)', function(e){
     e.preventDefault();
 });
 
+function showPopup() {
+    const url = "../imgBy.html";
+    const name = "이미지출처";
+    const specs = "width=580, height=600, left=200, top=100";
+    
+    window.open(url, name, specs);
+}
+
 
 // 모바일 메뉴 open/close
 $(function () {
